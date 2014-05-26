@@ -118,7 +118,6 @@ TIMEFRAME
 			puts
 			puts "Let's try another phrase"
 			sleep(5)
-			get_phrase
 		else
 			puts
 			puts "The phrase '#{@phrase.upcase}' has been used by the following politicians"
