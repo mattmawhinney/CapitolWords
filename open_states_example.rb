@@ -12,10 +12,10 @@ require 'json'
 
 
 
-http://openstates.org/api/v1/GET/
+# http://openstates.org/api/v1/GET/
 
-http://openstates.org/api/v1/districts/fl/&apikey=6a06406197ce43ada84a590a45eb065c
+# http://openstates.org/api/v1/districts/fl/&apikey=6a06406197ce43ada84a590a45eb065c
 
-'http://openstates.org/api/v1/' + method + '/?' + 'apikey=' + key + '&' + query,
+# 'http://openstates.org/api/v1/' + method + '/?' + 'apikey=' + key + '&' + query,
 
-"http://openstates.org/api/v1/districts/fl/?apikey=6a06406197ce43ada84a590a45eb065c
+# "http://openstates.org/api/v1/districts/fl/?apikey=6a06406197ce43ada84a590a45eb065c
