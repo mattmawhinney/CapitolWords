@@ -34,10 +34,4 @@ module HelperMethods
 	end 
 
 
-	
-
-
-		# want a method that 
-
-
 end 

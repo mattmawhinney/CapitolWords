@@ -3,9 +3,11 @@ require 'nokogiri'
 require 'json'
 require './test_capitol_words.rb'
 require './helper_methods.rb'
+require './api_key.rb'
 
 include TestPhraseMatcher
-include HelperMethods 
+include HelperMethods
+include APIKey 
 
 
 #As a curious citizen 
@@ -17,7 +19,7 @@ class PhraseMatcher
 	def initialize 
 		@uri_first = "http://capitolwords.org/api/1/phrases/legislator.json?phrase="
 		@uri_third = "&mincount=5&page=0&per_page=50&sort=count"
-		@uri_fifth = "&apikey=6a06406197ce43ada84a590a45eb065c"
+		@uri_fifth = "&apikey=#{api_key}"
 		program_loop
 		
 	end 
