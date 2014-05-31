@@ -1,5 +1,5 @@
-require './test_capitol_words.rb'
-include TestPhraseMatcher
+# require './test_capitol_words.rb'
+# include TestPhraseMatcher
 
 module HelperMethods
 
@@ -24,14 +24,28 @@ module HelperMethods
 
 	end 
 
+	def to_ymd
 
-	def prompt
-		print "> "
-	end 
+			current_time = Time.now.to_i
+   		time_frame = self * 365 * 24 * 60 * 60 
+			past_time = Time.at(current_time - time_frame)
+			
+			past_date = past_time.strftime("%Y-%m-%d")
+			current_date = Time.now.strftime("%Y-%m-%d")
 
-	def clear 
-		puts "\e[H\e[2J\n" 
-	end 
+		  "&start_date=#{past_date}&end_date=#{current_date}"
+
+
+	end
+
+
+	# def prompt
+	# 	print "> "
+	# end 
+
+	# def clear 
+	# 	puts "\e[H\e[2J\n" 
+	# end 
 
 
 end 

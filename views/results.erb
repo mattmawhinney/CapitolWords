@@ -1,0 +1,40 @@
+
+<% require "./capitol_words_sinatra.rb" %>
+<% require "./server.rb" %> 
+
+<% my_pm = PhraseMatcher.new(@input_phrase, @input_time_frame)%>
+
+<%  responses = my_pm.response_and_parse     %> 
+
+<h2>Phrase: '<%= @input_phrase.downcase %>'' </h2>
+<br>
+
+<table class="table">
+	<tr> 
+		<th>Rank</th>
+		<th>Legislator</th>
+		<th># of Uses</th>
+	
+	</tr>
+
+		
+
+	<% counter = 1 %>
+
+	
+
+	<% responses.each do |response| %>
+		<tr>
+			<td><%= "#{counter}" %> </td>
+			<td><a href="<%= "#{response['legislator'].bioguide_uri}" %>" target="blank"> <%= "#{response['legislator'].id_to_politician}" %></a></td>
+			<td><%= "#{response['count'].to_i}" %></td>
+			
+	 
+	  <% counter += 1 %>
+		</tr>
+
+	<%end %>
+
+</table>
+
+
