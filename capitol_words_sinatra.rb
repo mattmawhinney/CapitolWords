@@ -7,12 +7,11 @@ require './api_key.rb'
 
 
 include HelperMethods
-include APIKey 
 
 
 	URI_FIRST = "http://capitolwords.org/api/1/phrases/legislator.json?phrase="
 	URI_THIRD = "&mincount=5&page=0&per_page=50&sort=count"
-	URI_FIFTH = "&apikey=#{api_key}"
+	URI_FIFTH = "&apikey=#{SUNLIGHT_KEY}"
 
 
 
